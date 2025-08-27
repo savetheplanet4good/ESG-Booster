@@ -41,6 +41,7 @@ Key Docs
 - docs/API.md — endpoints, parameters, and curl examples
 - docs/DATA.md — data contracts and schemas
 - docs/ARCHITECTURE.md — components and flows
+- docs/BUSINESS_CONTEXT.md — purpose, scope, KPIs, risks, roadmap
 - docs/TROUBLESHOOTING.md — common issues and fixes
 - docs/GITHUB_MIGRATION.md — push to GitHub and set up a new laptop
 
