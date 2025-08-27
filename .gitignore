@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+.vscode/
+
+# Data
+data/curated/*.parquet
+data/duckdb/*.duckdb
+
+# Streamlit secrets
+frontend/.streamlit/secrets.toml
+
+# Docker
+*.log
+
+# Archives and secrets
+*.zip
+.env
+*.env
+portfolio-service-client_AMS/portfolio-service-client_AMS/src/main/resources/alternative.json
+
+

@@ -1,0 +1,22 @@
+[{
+ "alternativeId":1,
+ "isin":"US42809H1077",
+ "name":"Hess",
+ "esgScore":79.36,
+ "holdingValue": 4,
+ "influenceScore":3
+},{
+ "alternativeId":2,
+ "isin":"US6550441058",
+ "name":"Noble Energy",
+ "esgScore":65.33,
+ "holdingValue": 3,
+ "influenceScore":5
+},{
+ "alternativeId":3,
+ "isin":"US5658491064",
+ "name":"Marathon Oil",
+ "esgScore":63.04,
+ "holdingValue": 2,
+ "influenceScore":2
+}]

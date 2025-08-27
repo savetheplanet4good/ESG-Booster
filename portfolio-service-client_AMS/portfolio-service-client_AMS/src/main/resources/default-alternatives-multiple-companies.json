@@ -1,0 +1,19 @@
+[{
+ "alternativeId":1,
+ "isin":"US42809H1077",
+ "companyName":"Hess",
+ "esgScore":79.36,
+ "percentageHolding": 4
+},{
+ "alternativeId":2,
+ "isin":"US6550441058",
+ "companyName":"Noble Energy",
+ "esgScore":65.33,
+ "percentageHolding": 3
+},{
+ "alternativeId":3,
+ "isin":"US5658491064",
+ "companyName":"Marathon Oil",
+ "esgScore":63.04,
+ "percentageHolding": 2
+}]

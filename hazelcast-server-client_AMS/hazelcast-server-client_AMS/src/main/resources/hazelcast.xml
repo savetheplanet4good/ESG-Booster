@@ -1,0 +1,96 @@
+<!--
+<?xml version="1.0" encoding="UTF-8"?>
+<hazelcast xmlns="http://www.hazelcast.com/schema/config"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.hazelcast.com/schema/config
+           http://www.hazelcast.com/schema/config/hazelcast-config-4.2.xsd">
+
+    &lt;!&ndash;
+        When Hazelcast instances are created, they are put in a global registry with their creation names.
+        <instance-name> elements gives you the ability to get a specific Hazelcast instance from this registry
+        by giving the instance's name.
+    &ndash;&gt;
+
+	
+	&lt;!&ndash; HAZELCAST MANAGEMENT CENTER CONFIGURATION &ndash;&gt;
+	<management-center enabled="true">http://localhost:8090/hazelcast-mancenter
+	</management-center>
+	<properties>
+		<property name="hazelcast.logging.type">slf4j</property>
+	</properties>
+	<map name="portfolios">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>1800</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			<class-name>org.synechron.portfolio.hazelcastserver.mapstore.PortfolioMapStore
+			</class-name>
+			<write-delay-seconds>0</write-delay-seconds>
+		</map-store>
+	</map>
+	<map name="companiesnews">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>2000</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			<class-name>org.synechron.portfolio.hazelcastserver.mapstore.CompanyNewsMapStore
+			</class-name>
+			<write-delay-seconds>0</write-delay-seconds>
+		</map-store>
+	</map>
+	<map name="benchmarks">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>2000</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			&lt;!&ndash; <class-name>org.synechron.portfolio.hazelcastserver.mapstore.**provide
+				benchmark map store name**</class-name> &ndash;&gt;
+			<write-delay-seconds>0</write-delay-seconds>
+		</map-store>
+	</map>
+	<map name="alternativecompanies">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>2000</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			&lt;!&ndash; <class-name>com.investTech.services.hazelcastmemberservice.mapstore.*Provide
+				class name*</class-name> &ndash;&gt;
+			<write-delay-seconds>0</write-delay-seconds>
+		</map-store>
+	</map>
+	<map name="alternatives">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>2000</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			<class-name>org.synechron.portfolio.hazelcastserver.mapstore.AlternativeMapStore
+			</class-name>
+			<write-delay-seconds>0</write-delay-seconds>
+			<properties>
+				<property name="hazelcast.logging.type">slf4j</property>
+			</properties>
+		</map-store>
+	</map>
+	<map name="failedAlterntaivesRequests">
+		<max-size policy="FREE_HEAP_SIZE">300</max-size>
+		<eviction-policy>LRU</eviction-policy>
+		<backup-count>2</backup-count>
+		<async-backup-count>2</async-backup-count>
+		<time-to-live-seconds>2000</time-to-live-seconds>
+		<map-store enabled="true" initial-mode="EAGER">
+			<class-name>org.synechron.portfolio.hazelcastserver.mapstore.FailedInvestSuiteRequestsMapStore
+			</class-name>
+			<write-delay-seconds>0</write-delay-seconds>
+		</map-store>
+	</map>
+</hazelcast>-->

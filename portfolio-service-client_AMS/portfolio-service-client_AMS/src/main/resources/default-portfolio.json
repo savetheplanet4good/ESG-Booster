@@ -1,0 +1,1520 @@
+[
+  {
+    "portfolioId": 1,
+    "portfolioName": "Diversified Portfolio",
+    "portfolioType": "default",
+    "investableUniverseType": "Refinitive",
+    "esgCombinedScore": 48.5281121098,
+    "esgScore": 74.7289981698,
+    "envScore": 77.3300663411,
+    "socialScore": 82.8321972668,
+    "govScore": 61.2929228116,
+    "companies": [
+      {
+        "isin": "US0378331005",
+        "name": "Apple Inc.",
+        "esgCombinedScore": 37.29602916,
+        "controversyScore": 3.846153846,
+        "esgScore": 70.74590447,
+        "environmentalScore": 58.92486962,
+        "socialScore": 68.32038234,
+        "governenceScore": 80.123,
+        "holdingValue": 14.00,
+        "totalESGCombinedScore": 5.2214440824,
+        "totalESGScore": 9.9044266258,
+        "totalEnvironmentalScore": 8.2494817468,
+        "totalSocialScore": 9.5648535276,
+        "totalGovernanceScore": 11.889119382,
+        "influenceESGCombinedScore": -3.24037,
+        "influenceESGSCore": 0.02483,
+        "influenceEnvironmentalScore": 0.01931,
+        "influenceSocialScore": 0.01952,
+        "influenceGovernanceScore": 0.04431,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 91.40625
+          },
+          {
+            "name": "Emissions",
+            "score": 78.81355932
+          },
+          {
+            "name": "Innovations",
+            "score": 42.30769231
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 77.08333333
+          },
+          {
+            "name": "Human Rights",
+            "score": 64.9122807
+          },
+          {
+            "name": "Community",
+            "score": 78.47222222
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 86.95737192
+          },
+          {
+            "name": "Stakeholders",
+            "score": 84.64998045
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 75.1552795
+          }
+        ]
+      },
+      {
+        "isin": "US00724F1012",
+        "name": "Adobe Inc.",
+        "esgScore": 65.9309782,
+        "environmentalScore": 77.02383749,
+        "socialScore": 75.10433429,
+        "governenceScore": 54.70384156,
+        "holdingValue": 8,
+        "esgCombinedScore": 65.9309782,
+        "controversyScore": 90.38461539,
+        "totalESGCombinedScore": 5.274478256,
+        "totalESGScore": 5.274478256,
+        "totalEnvironmentalScore": 6.1619069992,
+        "totalSocialScore": 6.0083467432,
+        "totalGovernanceScore": 4.3763073248,
+        "influenceESGCombinedScore": 2.86891,
+        "influenceESGSCore": 0.00756,
+        "influenceEnvironmentalScore": 0.00824,
+        "influenceSocialScore": 0.00701,
+        "influenceGovernanceScore": 0.00932,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 96.51162791
+          },
+          {
+            "name": "Emissions",
+            "score": 94.6969697
+          },
+          {
+            "name": "Innovations",
+            "score": 53.57142857
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 92.00477326
+          },
+          {
+            "name": "Human Rights",
+            "score": 68.71794871
+          },
+          {
+            "name": "Community",
+            "score": 98.92601431
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 49.23105776
+          },
+          {
+            "name": "Stakeholders",
+            "score": 57.67066767
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 98.92601431
+          }
+        ]
+      },
+      {
+        "isin": "US0231351067",
+        "name": "Amazon.com, Inc.",
+        "esgScore": 86.75498282,
+        "environmentalScore": 81.06763926,
+        "socialScore": 91.2062137,
+        "governenceScore": 87.1338668,
+        "holdingValue": 12,
+        "esgCombinedScore": 44.69328089,
+        "controversyScore": 2.631578947,
+        "totalESGCombinedScore": 5.3631937068,
+        "totalESGScore": 10.4105979384,
+        "totalEnvironmentalScore": 9.7281167112,
+        "totalSocialScore": 10.944745644,
+        "totalGovernanceScore": 10.456064016,
+        "influenceESGCombinedScore": -0.94827,
+        "influenceESGSCore": 0.02237,
+        "influenceEnvironmentalScore": 0.01952,
+        "influenceSocialScore": 0.01914,
+        "influenceGovernanceScore": 0.0334,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 81.25
+          },
+          {
+            "name": "Emissions",
+            "score": 95.45454546
+          },
+          {
+            "name": "Innovations",
+            "score": 27.5862069
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 91.66666666
+          },
+          {
+            "name": "Human Rights",
+            "score": 96.49122807
+          },
+          {
+            "name": "Community",
+            "score": 89.1025641
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 94.42985746
+          },
+          {
+            "name": "Stakeholders",
+            "score": 82.01425356
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 58.33333333
+          }
+        ]
+      },
+      {
+        "isin": "US0605051046",
+        "name": "Bank of America Corporation",
+        "esgScore": 74.1564804,
+        "environmentalScore": 88.83814932,
+        "socialScore": 86.10289811,
+        "governenceScore": 51.82430401,
+        "holdingValue": 5,
+        "esgCombinedScore": 38.04911399,
+        "controversyScore": 1.941747573,
+        "totalESGCombinedScore": 1.9024556995,
+        "totalESGScore": 3.70782402,
+        "totalEnvironmentalScore": 4.441907466,
+        "totalSocialScore": 4.3051449055,
+        "totalGovernanceScore": 2.5912152005,
+        "influenceESGCombinedScore": -1.07968,
+        "influenceESGSCore": 0.00332,
+        "influenceEnvironmentalScore": 0.00371,
+        "influenceSocialScore": 0.00314,
+        "influenceGovernanceScore": 0.00345,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 99.85549133
+          },
+          {
+            "name": "Emissions",
+            "score": 83.75706215
+          },
+          {
+            "name": "Innovations",
+            "score": 87.3540856
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 82.265625
+          },
+          {
+            "name": "Human Rights",
+            "score": 88.24701195
+          },
+          {
+            "name": "Community",
+            "score": 98.984375
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 35.76456785
+          },
+          {
+            "name": "Stakeholders",
+            "score": 76.59366445
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 94.9689441
+          }
+        ]
+      },
+      {
+        "isin": "US2546871060",
+        "name": "The Walt Disney Company",
+        "esgScore": 74.80335524,
+        "environmentalScore": 57.52030578,
+        "socialScore": 80.3636506,
+        "governenceScore": 73.24331617,
+        "holdingValue": 7,
+        "esgCombinedScore": 38.11596334,
+        "controversyScore": 1.428571429,
+        "totalESGCombinedScore": 2.6681174338,
+        "totalESGScore": 5.2362348668,
+        "totalEnvironmentalScore": 4.0264214046,
+        "totalSocialScore": 5.625455542,
+        "totalGovernanceScore": 5.1270321319,
+        "influenceESGCombinedScore": -1.50191,
+        "influenceESGSCore": 0.00656,
+        "influenceEnvironmentalScore": 0.00471,
+        "influenceSocialScore": 0.00574,
+        "influenceGovernanceScore": 0.00955,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 89.56043956
+          },
+          {
+            "name": "Emissions",
+            "score": 76.63043478
+          },
+          {
+            "name": "Innovations",
+            "score": 0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 66.11842105
+          },
+          {
+            "name": "Human Rights",
+            "score": 55.97014925
+          },
+          {
+            "name": "Community",
+            "score": 98.35526315
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 69.52363091
+          },
+          {
+            "name": "Stakeholders",
+            "score": 87.64066017
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 70.2457265
+          }
+        ]
+      },
+      {
+        "isin": "US4781601046",
+        "name": "Johnson & Johnson",
+        "esgScore": 77.15214373,
+        "environmentalScore": 90.90836616,
+        "socialScore": 96.93919117,
+        "governenceScore": 37.49360417,
+        "holdingValue": 14,
+        "esgCombinedScore": 39.01466836,
+        "controversyScore": 0.877192982,
+        "totalESGCombinedScore": 5.4620535704,
+        "totalESGScore": 10.8013001222,
+        "totalEnvironmentalScore": 12.7271712624,
+        "totalSocialScore": 13.5714867638,
+        "totalGovernanceScore": 5.2491045838,
+        "influenceESGCombinedScore": -2.74456,
+        "influenceESGSCore": 0.02708,
+        "influenceEnvironmentalScore": 0.0298,
+        "influenceSocialScore": 0.02769,
+        "influenceGovernanceScore": 0.01956,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 98.99328859
+          },
+          {
+            "name": "Emissions",
+            "score": 57.40740741
+          },
+          {
+            "name": "Innovations",
+            "score": 93.09210526
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 98.853211
+          },
+          {
+            "name": "Human Rights",
+            "score": 94.57364341
+          },
+          {
+            "name": "Community",
+            "score": 98.853211
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 24.1747937
+          },
+          {
+            "name": "Stakeholders",
+            "score": 42.14178545
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 97.11538462
+          }
+        ]
+      },
+      {
+        "isin": "US67066G1040",
+        "name": "NVIDIA Corporation",
+        "esgScore": 78.465568,
+        "environmentalScore": 70.63179176,
+        "socialScore": 85.77170526,
+        "governenceScore": 75.81097301,
+        "holdingValue": 9,
+        "esgCombinedScore": 45.96355323,
+        "controversyScore": 13.46153846,
+        "totalESGCombinedScore": 4.1367197907,
+        "totalESGScore": 7.06190112,
+        "totalEnvironmentalScore": 6.3568612584,
+        "totalSocialScore": 7.7194534734,
+        "totalGovernanceScore": 6.8229875709,
+        "influenceESGCombinedScore": -0.47562,
+        "influenceESGSCore": 0.01138,
+        "influenceEnvironmentalScore": 0.00957,
+        "influenceSocialScore": 0.01013,
+        "influenceGovernanceScore": 0.01635,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 94.88188976
+          },
+          {
+            "name": "Emissions",
+            "score": 93.85245902
+          },
+          {
+            "name": "Innovations",
+            "score": 33.33333333
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 98.853211
+          },
+          {
+            "name": "Human Rights",
+            "score": 84.01639344
+          },
+          {
+            "name": "Community",
+            "score": 95.6081081
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 78.99397136
+          },
+          {
+            "name": "Stakeholders",
+            "score": 58.76036172
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 85.4718982
+          }
+        ]
+      },
+      {
+        "isin": "US7170811035",
+        "name": "Pfizer Inc.",
+        "esgScore": 63.00934029,
+        "environmentalScore": 70.04017792,
+        "socialScore": 82.74352209,
+        "governenceScore": 28.03340793,
+        "holdingValue": 8,
+        "esgCombinedScore": 54.31168769,
+        "controversyScore": 45.61403509,
+        "totalESGCombinedScore": 4.3449350152,
+        "totalESGScore": 5.0407472232,
+        "totalEnvironmentalScore": 5.6032142336,
+        "totalSocialScore": 6.6194817672,
+        "totalGovernanceScore": 2.2426726344,
+        "influenceESGCombinedScore": 0.95344,
+        "influenceESGSCore": 0.00722,
+        "influenceEnvironmentalScore": 0.0075,
+        "influenceSocialScore": 0.00772,
+        "influenceGovernanceScore": 0.00478,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 82.88590604
+          },
+          {
+            "name": "Emissions",
+            "score": 76.64473684
+          },
+          {
+            "name": "Innovations",
+            "score": 7.407407407
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 74.0825688
+          },
+          {
+            "name": "Human Rights",
+            "score": 87.98449612
+          },
+          {
+            "name": "Community",
+            "score": 93.80733944
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 12.02175544
+          },
+          {
+            "name": "Stakeholders",
+            "score": 38.84096024
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 91.88034188
+          }
+        ]
+      },
+      {
+        "isin": "US7427181091",
+        "name": "The Procter & Gamble Company",
+        "esgScore": 72.75728858,
+        "environmentalScore": 88.74483531,
+        "socialScore": 79.68215399,
+        "governenceScore": 43.30472575,
+        "holdingValue": 15,
+        "esgCombinedScore": 72.75728858,
+        "controversyScore": 100,
+        "totalESGCombinedScore": 10.913593287,
+        "totalESGScore": 10.913593287,
+        "totalEnvironmentalScore": 13.3117252965,
+        "totalSocialScore": 11.9523230985,
+        "totalGovernanceScore": 6.4957088625,
+        "influenceESGCombinedScore": 7.48922,
+        "influenceESGSCore": 0.02931,
+        "influenceEnvironmentalScore": 0.03339,
+        "influenceSocialScore": 0.02613,
+        "influenceGovernanceScore": 0.02594,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 89.68253968
+          },
+          {
+            "name": "Emissions",
+            "score": 80.50847458
+          },
+          {
+            "name": "Innovations",
+            "score": 98.78048781
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 74.4047619
+          },
+          {
+            "name": "Human Rights",
+            "score": 90.35087719
+          },
+          {
+            "name": "Community",
+            "score": 73.8095238
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 72.56189047
+          },
+          {
+            "name": "Stakeholders",
+            "score": 72.56189047
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 24.81245311
+          }
+        ]
+      },
+      {
+        "isin": "US46625H1005",
+        "name": "JPMorgan Chase & Co.",
+        "esgScore": 79.72368388,
+        "environmentalScore": 88.74483531,
+        "socialScore": 79.68215399,
+        "governenceScore": 43.30472575,
+        "holdingValue": 8,
+        "esgCombinedScore": 40.51401585,
+        "controversyScore": 1.304347826,
+        "totalESGCombinedScore": 3.241121268,
+        "totalESGScore": 6.3778947104,
+        "totalEnvironmentalScore": 6.7232599624,
+        "totalSocialScore": 6.5209058016,
+        "totalGovernanceScore": 6.0427111048,
+        "influenceESGCombinedScore": -1.32115,
+        "influenceESGSCore": 0.00914,
+        "influenceEnvironmentalScore": 0.00899,
+        "influenceSocialScore": 0.0076,
+        "influenceGovernanceScore": 0.01287,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 85.28645833
+          },
+          {
+            "name": "Emissions",
+            "score": 73.375
+          },
+          {
+            "name": "Innovations",
+            "score": 86.39575972
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 70.54992764
+          },
+          {
+            "name": "Human Rights",
+            "score": 95.35714285
+          },
+          {
+            "name": "Community",
+            "score": 92.54703328
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 94.2048012
+          },
+          {
+            "name": "Stakeholders",
+            "score": 16.82295574
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 70.2457265
+          }
+        ]
+      }
+    ],
+    "environmentalFactors": [
+      {
+        "name": "Resource Use",
+        "score": 25
+      },
+      {
+        "name": "Emissions",
+        "score": 25
+      },
+      {
+        "name": "Innovations",
+        "score": 10
+      }
+    ],
+    "socialFactors": [
+      {
+        "name": "Work Force",
+        "score": 30
+      },
+      {
+        "name": "Human Rights",
+        "score": 25
+      },
+      {
+        "name": "Community",
+        "score": 20
+      }
+    ],
+    "governanceFactors": [
+      {
+        "name": "Management",
+        "score": 35
+      },
+      {
+        "name": "Stakeholders",
+        "score": 25
+      },
+      {
+        "name": "CSR Strategy",
+        "score": 25
+      }
+    ],
+    "benchmarks": [
+      {
+        "indexName": "S&P 500",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 4.00
+      },
+      {
+        "indexName": "Nasdaq",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      },
+      {
+        "indexName": "MSCI",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 70.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      },
+      {
+        "indexName": "Systanalytics",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      }
+    ],
+    "investableUniverseFilter": {
+      "esg": 0,
+      "environmental": 0,
+      "social": 0,
+      "governance": 0
+    },
+    "sector": {
+      "sectors": {
+        "energy": 40,
+        "Materials": 30,
+        "Industrials": 15,
+        "Consumer Discretionary": 15,
+        "Consumer Staples": 4,
+        "Health Care": 4,
+        "Financials": 1,
+        "Information Technology": 1,
+        "Telecommunication Services": 1,
+        "Utiilities": 1,
+        "Real Estate": 1
+      }
+    },
+    "regions": [
+      "GB",
+      "US"
+    ],
+    "currency": [
+      "USD"
+    ]
+  },
+  {
+    "portfolioId": 2,
+    "portfolioName": "Mid Cap Portfolio",
+    "portfolioType": "default",
+    "investableUniverseType": "Sustainanalytics",
+    "esgCombinedScore": 22.6824,
+    "esgScore": 22.6824,
+    "envScore": 2.4144,
+    "socialScore": 11.5665,
+    "govScore": 0.0,
+    "companies": [
+      {
+        "isin": "US0378331005",
+        "name": "Apple Inc.",
+        "esgScore": 23.62,
+        "environmentalScore": 0.49,
+        "socialScore": 12.98,
+        "governenceScore": 10.15,
+        "holdingValue": 14,
+        "esgCombinedScore": 23.62,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 23.62,
+        "totalESGScore": 23.62,
+        "totalEnvironmentalScore": 0.49,
+        "totalSocialScore": 12.98,
+        "totalGovernanceScore": 10.15,
+        "influenceESGCombinedScore": 0.16534,
+        "influenceESGSCore": 0.16534,
+        "influenceEnvironmentalScore": 0.33623,
+        "influenceSocialScore": 0.38809,
+        "influenceGovernanceScore": 0.53602,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US00724F1012",
+        "name": "Adobe Inc.",
+        "esgScore": 13.59,
+        "environmentalScore": 0.45,
+        "socialScore": 8.08,
+        "governenceScore": 5.07,
+        "holdingValue": 8,
+        "esgCombinedScore": 13.59,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 13.59,
+        "totalESGScore": 13.59,
+        "totalEnvironmentalScore": 0.45,
+        "totalSocialScore": 8.08,
+        "totalGovernanceScore": 5.07,
+        "influenceESGCombinedScore": -6.41371,
+        "influenceESGSCore": -6.41371,
+        "influenceEnvironmentalScore": 1.23513,
+        "influenceSocialScore": 0.96633,
+        "influenceGovernanceScore": 1.07098,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US0231351067",
+        "name": "Amazon.com, Inc.",
+        "esgScore": 30.57,
+        "environmentalScore": 5.82,
+        "socialScore": 13.74,
+        "governenceScore": 11.01,
+        "holdingValue": 12,
+        "esgCombinedScore": 30.57,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 30.57,
+        "totalESGScore": 30.57,
+        "totalEnvironmentalScore": 5.82,
+        "totalSocialScore": 13.74,
+        "totalGovernanceScore": 11.01,
+        "influenceESGCombinedScore": 3.12967,
+        "influenceESGSCore": 3.12967,
+        "influenceEnvironmentalScore": 8.9856,
+        "influenceSocialScore": 0.92433,
+        "influenceGovernanceScore": 1.30822,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US0605051046",
+        "name": "Bank of America Corporation",
+        "esgScore": 27.32,
+        "environmentalScore": 1.74,
+        "socialScore": 15.52,
+        "governenceScore": 10.06,
+        "holdingValue": 5,
+        "esgCombinedScore": 27.32,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 27.32,
+        "totalESGScore": 27.32,
+        "totalEnvironmentalScore": 1.74,
+        "totalSocialScore": 15.52,
+        "totalGovernanceScore": 10.06,
+        "influenceESGCombinedScore": 2.24904,
+        "influenceESGSCore": 2.24904,
+        "influenceEnvironmentalScore": 3.2834,
+        "influenceSocialScore": 1.27609,
+        "influenceGovernanceScore": 1.46097,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US2546871060",
+        "name": "The Walt Disney Company",
+        "esgScore": 16.28,
+        "environmentalScore": 0.03,
+        "socialScore": 7.81,
+        "governenceScore": 8.44,
+        "holdingValue": 7,
+        "esgCombinedScore": 16.28,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 16.28,
+        "totalESGScore": 16.28,
+        "totalEnvironmentalScore": 0.03,
+        "totalSocialScore": 7.81,
+        "totalGovernanceScore": 8.44,
+        "influenceESGCombinedScore": -2.2581,
+        "influenceESGSCore": -2.2581,
+        "influenceEnvironmentalScore": 0.04117,
+        "influenceSocialScore": 0.46702,
+        "influenceGovernanceScore": 0.89142,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US4781601046",
+        "name": "Johnson & Johnson",
+        "esgScore": 32.78,
+        "environmentalScore": 1.29,
+        "socialScore": 20.14,
+        "governenceScore": 11.35,
+        "holdingValue": 14,
+        "esgCombinedScore": 32.78,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 32.78,
+        "totalESGScore": 32.78,
+        "totalEnvironmentalScore": 1.29,
+        "totalSocialScore": 20.14,
+        "totalGovernanceScore": 11.35,
+        "influenceESGCombinedScore": 5.34208,
+        "influenceESGSCore": 5.34208,
+        "influenceEnvironmentalScore": 2.65554,
+        "influenceSocialScore": 1.8065,
+        "influenceGovernanceScore": 1.79816,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US67066G1040",
+        "name": "NVIDIA Corporation",
+        "esgScore": 12.92,
+        "environmentalScore": 2.33,
+        "socialScore": 4.15,
+        "governenceScore": 6.44,
+        "holdingValue": 9,
+        "esgCombinedScore": 12.92,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 12.92,
+        "totalESGScore": 12.92,
+        "totalEnvironmentalScore": 2.33,
+        "totalSocialScore": 4.15,
+        "totalGovernanceScore": 6.44,
+        "influenceESGCombinedScore": -5.59514,
+        "influenceESGSCore": -5.59514,
+        "influenceEnvironmentalScore": 5.19614,
+        "influenceSocialScore": 0.40326,
+        "influenceGovernanceScore": 1.1053,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US7170811035",
+        "name": "Pfizer Inc.",
+        "esgScore": 29.65,
+        "environmentalScore": 2,
+        "socialScore": 15.97,
+        "governenceScore": 11.68,
+        "holdingValue": 8,
+        "esgCombinedScore": 29.65,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 29.65,
+        "totalESGScore": 29.65,
+        "totalEnvironmentalScore": 2,
+        "totalSocialScore": 15.97,
+        "totalGovernanceScore": 11.68,
+        "influenceESGCombinedScore": 2.15027,
+        "influenceESGSCore": 2.15027,
+        "influenceEnvironmentalScore": 2.40165,
+        "influenceSocialScore": 0.8356,
+        "influenceGovernanceScore": 1.07943,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US7427181091",
+        "name": "The Procter & Gamble Company",
+        "esgScore": 25.68,
+        "environmentalScore": 8.21,
+        "socialScore": 9.42,
+        "governenceScore": 8.05,
+        "holdingValue": 15,
+        "esgCombinedScore": 25.68,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 25.68,
+        "totalESGScore": 25.68,
+        "totalEnvironmentalScore": 8.21,
+        "totalSocialScore": 9.42,
+        "totalGovernanceScore": 8.05,
+        "influenceESGCombinedScore": 1.45371,
+        "influenceESGSCore": 1.45371,
+        "influenceEnvironmentalScore": 15.49235,
+        "influenceSocialScore": 0.77453,
+        "influenceGovernanceScore": 1.16907,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      },
+      {
+        "isin": "US46625H1005",
+        "name": "JPMorgan Chase & Co.",
+        "esgScore": 22.12,
+        "environmentalScore": 1.16,
+        "socialScore": 11.95,
+        "governenceScore": 9.01,
+        "holdingValue": 8,
+        "esgCombinedScore": 22.12,
+        "controversyScore": 0,
+        "totalESGCombinedScore": 6.3778947104,
+        "totalESGScore": 22.12,
+        "totalEnvironmentalScore": 1.16,
+        "totalSocialScore": 11.95,
+        "totalGovernanceScore": 9.01,
+        "influenceESGCombinedScore": -0.22315,
+        "influenceESGSCore": -0.22315,
+        "influenceEnvironmentalScore": 1.79094,
+        "influenceSocialScore": 0.80391,
+        "influenceGovernanceScore": 1.07058,
+        "environmentalFactors": [
+          {
+            "name": "Resource Use",
+            "score": 0.0
+          },
+          {
+            "name": "Emissions",
+            "score": 0.0
+          },
+          {
+            "name": "Innovations",
+            "score": 0.0
+          }
+        ],
+        "socialFactors": [
+          {
+            "name": "Work Force",
+            "score": 0.0
+          },
+          {
+            "name": "Human Rights",
+            "score": 0.0
+          },
+          {
+            "name": "Community",
+            "score": 0.0
+          }
+        ],
+        "governanceFactors": [
+          {
+            "name": "Management",
+            "score": 0.0
+          },
+          {
+            "name": "Stakeholders",
+            "score": 0.0
+          },
+          {
+            "name": "CSR Strategy",
+            "score": 0.0
+          }
+        ]
+      }
+    ],
+    "environmentalFactors": [
+      {
+        "name": "Resource Use",
+        "score": 0.0
+      },
+      {
+        "name": "Emissions",
+        "score": 0.0
+      },
+      {
+        "name": "Innovations",
+        "score": 0.0
+      }
+    ],
+    "socialFactors": [
+      {
+        "name": "Work Force",
+        "score": 0.0
+      },
+      {
+        "name": "Human Rights",
+        "score": 0.0
+      },
+      {
+        "name": "Community",
+        "score": 0.0
+      }
+    ],
+    "governanceFactors": [
+      {
+        "name": "Management",
+        "score": 0.0
+      },
+      {
+        "name": "Stakeholders",
+        "score": 0.0
+      },
+      {
+        "name": "CSR Strategy",
+        "score": 0.0
+      }
+    ],
+    "benchmarks": [
+      {
+        "indexName": "S&P 500",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 4.00
+      },
+      {
+        "indexName": "Nasdaq",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      },
+      {
+        "indexName": "MSCI",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 70.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      },
+      {
+        "indexName": "Systanalytics",
+        "indexTotalScore": 70.00,
+        "portfolioTotalScore": 75.00,
+        "envIndexScore": 55.00,
+        "envPortfolioScore": 75.00,
+        "socialIndexScore": 85.00,
+        "socialPortfolioScore": 35.00,
+        "govIndexScore": 50.00,
+        "govPortfolioScore": 45.00
+      }
+    ],
+    "investableUniverseFilter": {
+      "esg": 0,
+      "environmental": 0,
+      "social": 0,
+      "governance": 0
+    },
+    "sector": {
+      "sectors": {
+        "energy": 40,
+        "Materials": 30,
+        "Industrials": 15,
+        "Consumer Discretionary": 15,
+        "Consumer Staples": 4,
+        "Health Care": 1,
+        "Financials": 1,
+        "Information Technology": 1,
+        "Telecommunication Services": 1,
+        "Utiilities": 1,
+        "Real Estate": 1
+      }
+    },
+    "regions": [
+      "IN",
+      "US"
+    ],
+    "currency": [
+      "USD"
+    ]
+  }
+]

@@ -1,0 +1,4 @@
+FROM minio/minio:RELEASE.2022-05-26T05-48-41Z.fips
+
+
+EXPOSE 9000 9001

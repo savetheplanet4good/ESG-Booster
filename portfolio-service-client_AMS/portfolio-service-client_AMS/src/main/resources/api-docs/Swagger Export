@@ -1,0 +1,3385 @@
+Documentation for saas for evry service
+And user specific portfolios analysis document{
+   "swagger":"2.0",
+   "info":{
+      "title":"Portfolio Service REST API"
+   },
+   "host":"localhost:8080",
+   "basePath":"/portfolio-mgmt",
+   "tags":[
+      {
+         "name":"alternatives-controller",
+         "description":"Alternatives Controller"
+      },
+      {
+         "name":"benchmarking-controller",
+         "description":"Benchmarking Controller"
+      },
+      {
+         "name":"company-news-controller",
+         "description":"Company News Controller"
+      },
+      {
+         "name":"create-portfolio-controller",
+         "description":"Create Portfolio Controller"
+      },
+      {
+         "name":"forecast-controller",
+         "description":"Forecast Controller"
+      },
+      {
+         "name":"investible-universe-controller",
+         "description":"Investible Universe Controller"
+      },
+      {
+         "name":"portfolio-controller",
+         "description":"Portfolio Controller"
+      },
+      {
+         "name":"replace-controller",
+         "description":"Replace Controller"
+      },
+      {
+         "name":"save-for-later-controller",
+         "description":"Save For Later Controller"
+      }
+   ],
+   "paths":{
+      "/alternatives":{
+         "post":{
+            "tags":[
+               "alternatives-controller"
+            ],
+            "summary":"getAlternative",
+            "operationId":"getAlternativeUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"request",
+                  "description":"request",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/GetAlternativeRequest"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/AlternativeResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/alternatives/{portfolioId}/{isin}":{
+         "get":{
+            "tags":[
+               "alternatives-controller"
+            ],
+            "summary":"getAlternatives",
+            "operationId":"getAlternativesUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"isin",
+                  "in":"path",
+                  "description":"isin",
+                  "required":true,
+                  "type":"string"
+               },
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/AlternativeResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/benchmark-data/{portfolioId}":{
+         "get":{
+            "tags":[
+               "benchmarking-controller"
+            ],
+            "summary":"getBenchmarkData",
+            "operationId":"getBenchmarkDataUsingGET",
+            "produces":[
+               "application/json"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/BenchMarkResponseDto"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/clone-portfolio":{
+         "post":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"clonePortfolio",
+            "operationId":"clonePortfolioUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"clonePortfolioRequest",
+                  "description":"clonePortfolioRequest",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/ClonePortfolioRequest"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/ClonePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/companies/{portfolioId}":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getCompanies",
+            "operationId":"getCompaniesUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CompaniesResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/company-heap-map/{isin}":{
+         "get":{
+            "tags":[
+               "company-news-controller"
+            ],
+            "summary":"getCompanyHeatMap",
+            "operationId":"getCompanyHeatMapUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"isin",
+                  "in":"path",
+                  "description":"isin",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/HeatMapResponseDto"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/company-news-feeds/{isin}":{
+         "get":{
+            "tags":[
+               "company-news-controller"
+            ],
+            "summary":"getCompanyNewsFeeds",
+            "operationId":"getCompanyNewsFeedsUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"isin",
+                  "in":"path",
+                  "description":"isin",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/NewFeedsResponseDto"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/company/{portfolioId}/{isin}":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getCompany",
+            "operationId":"getCompanyUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"isin",
+                  "in":"path",
+                  "description":"isin",
+                  "required":true,
+                  "type":"string"
+               },
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CompanyDto"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/comparison/{portfolioId}":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getComparisonData",
+            "operationId":"getComparisonDataUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/ComparisonResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/evictAll":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"evict",
+            "operationId":"evictUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/files":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getFiles",
+            "operationId":"getFilesUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "type":"array",
+                     "items":{
+                        "$ref":"#/definitions/FileResponse"
+                     }
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/forecast/featureImportance":{
+         "get":{
+            "tags":[
+               "forecast-controller"
+            ],
+            "summary":"getFeatureImportance",
+            "operationId":"getFeatureImportanceUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/forecast/{isin}":{
+         "get":{
+            "tags":[
+               "forecast-controller"
+            ],
+            "summary":"getForecast",
+            "operationId":"getForecastUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"isin",
+                  "in":"path",
+                  "description":"isin",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/ForecastResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/generate-portfolio":{
+         "post":{
+            "tags":[
+               "create-portfolio-controller"
+            ],
+            "summary":"generatePortfolio",
+            "operationId":"generatePortfolioUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"generateString",
+                  "in":"query",
+                  "description":"generateString",
+                  "required":false,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CreatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/investableUniverseType-portfolio":{
+         "put":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"updateInvestibleUniverseType",
+            "operationId":"updateInvestibleUniverseTypeUsingPUT",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"updateInvestibleUniverseTypeDTO",
+                  "description":"updateInvestibleUniverseTypeDTO",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/UpdateInvestibleUniverseTypeDTO"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/UpdatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/investibleUniverse/{portfolioId}":{
+         "get":{
+            "tags":[
+               "investible-universe-controller"
+            ],
+            "summary":"getInvestibleUniverse",
+            "operationId":"getInvestibleUniverseUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/InvestibleUniverseResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         },
+         "post":{
+            "tags":[
+               "investible-universe-controller"
+            ],
+            "summary":"updateInvetibleUniverseFilter",
+            "operationId":"updateInvetibleUniverseFilterUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               },
+               {
+                  "in":"body",
+                  "name":"request",
+                  "description":"request",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/UpdateInvestmentUniverseFilterRequest"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/UpdateInvestibleUniverseResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/minio/portfolio":{
+         "put":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"updatePortfolioFromMinio",
+            "operationId":"updatePortfolioFromMinioUsingPUT",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"updatePortfolioMinioDto",
+                  "description":"updatePortfolioMinioDto",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/UpdatePortfolioFromMinioDto"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CreatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/minio/upload-portfolio":{
+         "post":{
+            "tags":[
+               "create-portfolio-controller"
+            ],
+            "summary":"uploadPortfolioFromMinio",
+            "operationId":"uploadPortfolioFromMinioUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"uploadPortfolioFromMinioDto",
+                  "description":"uploadPortfolioFromMinioDto",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/UploadPortfolioFromMinioDto"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CreatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/outliers/{portfolioId}":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getOutLiersForPortFolio",
+            "operationId":"getOutLiersForPortFolioUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CompaniesResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/portfolio":{
+         "put":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"updatePortfolio",
+            "operationId":"updatePortfolioUsingPUT",
+            "consumes":[
+               "multipart/form-data"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"file",
+                  "in":"formData",
+                  "description":"file",
+                  "required":true,
+                  "type":"file"
+               },
+               {
+                  "in":"formData",
+                  "name":"portfolioId",
+                  "description":"portfolioId",
+                  "required":true,
+                  "schema":{
+                     "type":"string"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CreatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/portfolio/{portfolioId}":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getPortfolio",
+            "operationId":"getPortfolioUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/PortfolioDto"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         },
+         "delete":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"deletePortfolio",
+            "operationId":"deletePortfolioUsingDELETE",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/DeletePortfolioResponse"
+                  }
+               },
+               "204":{
+                  "description":"No Content"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/portfolios":{
+         "get":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"getPortfolios",
+            "operationId":"getPortfoliosUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/PortfolioListResponse"
+                  }
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/refresh/{portfolioId}":{
+         "get":{
+            "tags":[
+               "alternatives-controller"
+            ],
+            "summary":"clearAlternativeCache",
+            "operationId":"clearAlternativeCacheUsingGET",
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"portfolioId",
+                  "in":"path",
+                  "description":"portfolioId",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/rename-portfolio":{
+         "put":{
+            "tags":[
+               "portfolio-controller"
+            ],
+            "summary":"renamePortfolio",
+            "operationId":"renamePortfolioUsingPUT",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"renamePortfolioDTO",
+                  "description":"renamePortfolioDTO",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/RenamePortfolioDto"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/UpdatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/replace":{
+         "post":{
+            "tags":[
+               "replace-controller"
+            ],
+            "summary":"replaceCompanies",
+            "operationId":"replaceCompaniesUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"replaceCompaniesRequest",
+                  "description":"replaceCompaniesRequest",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/ReplaceCompaniesRequest"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/ReplaceCompanyResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/save-for-later":{
+         "post":{
+            "tags":[
+               "save-for-later-controller"
+            ],
+            "summary":"saveForLaterPortfolio",
+            "operationId":"saveForLaterPortfolioUsingPOST",
+            "consumes":[
+               "application/json"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "in":"body",
+                  "name":"saveForLaterRequest",
+                  "description":"saveForLaterRequest",
+                  "required":true,
+                  "schema":{
+                     "$ref":"#/definitions/SaveForLaterRequest"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/SaveForLaterResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      },
+      "/upload-portfolio":{
+         "post":{
+            "tags":[
+               "create-portfolio-controller"
+            ],
+            "summary":"uploadPortfolio",
+            "operationId":"uploadPortfolioUsingPOST",
+            "consumes":[
+               "multipart/form-data"
+            ],
+            "produces":[
+               "*/*"
+            ],
+            "parameters":[
+               {
+                  "name":"file",
+                  "in":"formData",
+                  "description":"file",
+                  "required":true,
+                  "type":"file"
+               },
+               {
+                  "in":"formData",
+                  "name":"investibleUniverseType",
+                  "description":"investibleUniverseType",
+                  "required":true,
+                  "schema":{
+                     "type":"string"
+                  }
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"OK",
+                  "schema":{
+                     "$ref":"#/definitions/CreatePortfolioResponse"
+                  }
+               },
+               "201":{
+                  "description":"Created"
+               },
+               "401":{
+                  "description":"Unauthorized"
+               },
+               "403":{
+                  "description":"Forbidden"
+               },
+               "404":{
+                  "description":"Not Found"
+               }
+            },
+            "deprecated":false
+         }
+      }
+   },
+   "definitions":{
+      "AlternativeResponse":{
+         "type":"object",
+         "properties":{
+            "alternatives":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Alternatives"
+               }
+            },
+            "historicalPerformance":{
+               "$ref":"#/definitions/HistoricalPerformanceResponse"
+            },
+            "simulatedPortfolio":{
+               "$ref":"#/definitions/PortfolioSimulationResponse"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            },
+            "statusCode":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"AlternativeResponse"
+      },
+      "Alternatives":{
+         "type":"object",
+         "properties":{
+            "alternativeId":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "environmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governenceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "holdingValue":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "isin":{
+               "type":"string"
+            },
+            "name":{
+               "type":"string"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Alternatives"
+      },
+      "AlternativesCompany":{
+         "type":"object",
+         "properties":{
+            "companyName":{
+               "type":"string"
+            },
+            "country":{
+               "type":"string"
+            },
+            "countryName":{
+               "type":"string"
+            },
+            "environmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgControversiesScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governenceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "isPortfolioCompany":{
+               "type":"boolean"
+            },
+            "isin":{
+               "type":"string"
+            },
+            "isinType":{
+               "type":"string"
+            },
+            "sector":{
+               "type":"string"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsEnvScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsGovScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsTotalEsgScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"AlternativesCompany"
+      },
+      "BenchMarkResponseDto":{
+         "type":"object",
+         "properties":{
+            "benchmarkdata":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Benchmark"
+               }
+            },
+            "environmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalESG":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"BenchMarkResponseDto"
+      },
+      "Benchmark":{
+         "type":"object",
+         "properties":{
+            "envIndexScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govIndexScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "indexName":{
+               "type":"string"
+            },
+            "indexTotalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialIndexScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Benchmark"
+      },
+      "ClonePortfolioRequest":{
+         "type":"object",
+         "properties":{
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            }
+         },
+         "title":"ClonePortfolioRequest"
+      },
+      "ClonePortfolioResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            }
+         },
+         "title":"ClonePortfolioResponse"
+      },
+      "CompaniesResponse":{
+         "type":"object",
+         "properties":{
+            "companies":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/CompanyDto"
+               }
+            }
+         },
+         "title":"CompaniesResponse"
+      },
+      "Company":{
+         "type":"object",
+         "properties":{
+            "amountInvested":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "controversyScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "environmentalFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/EnvironmentalFactor"
+               }
+            },
+            "environmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governanceFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/GovernanceFactor"
+               }
+            },
+            "governenceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "holdingValue":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGSCore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGScoreForSustainalytics":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceEnvironmentalScoreForSustainalytics":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceGovernanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceGovernanceScoreForSustainalytics":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceSocialScoreForSustainalytics":{
+               "type":"number",
+               "format":"double"
+            },
+            "isOutlier":{
+               "type":"boolean"
+            },
+            "isin":{
+               "type":"string"
+            },
+            "isinType":{
+               "type":"string"
+            },
+            "name":{
+               "type":"string"
+            },
+            "outlierScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "refinitivNormalisedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/SocialFactor"
+               }
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsTotalESGScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsTotalEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsTotalGovernanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsTotalSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainlyticsEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainlyticsEsgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainlyticsGovernenceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainlyticsNormalisedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainlyticsSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalESGScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalGovernanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "wt":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Company"
+      },
+      "CompanyDto":{
+         "type":"object",
+         "properties":{
+            "controversyScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "environmentalFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "environmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governanceFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "governenceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "holdingValue":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceESGSCore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceGovernanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "influenceSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "isOutLier":{
+               "type":"boolean"
+            },
+            "isin":{
+               "type":"string"
+            },
+            "isinType":{
+               "type":"string"
+            },
+            "name":{
+               "type":"string"
+            },
+            "news":{
+               "$ref":"#/definitions/NewsDto"
+            },
+            "outlierScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "refinitivESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "refinitivNormalisedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsNormalisedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalESGCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalESGScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalEnvironmentalScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalGovernanceScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "totalSocialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "wt":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"CompanyDto"
+      },
+      "ComparisonResponse":{
+         "type":"object",
+         "properties":{
+            "countryAllocation":{
+               "$ref":"#/definitions/CountryAllocation"
+            },
+            "currency":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "currencyAllocation":{
+               "$ref":"#/definitions/CurrencyAllocation"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "regions":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "sector":{
+               "$ref":"#/definitions/Sector"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"ComparisonResponse"
+      },
+      "CountryAllocation":{
+         "type":"object",
+         "properties":{
+            "countryAllocation":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            }
+         },
+         "title":"CountryAllocation"
+      },
+      "CreatePortfolioResponse":{
+         "type":"object",
+         "properties":{
+            "errorMap":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"string"
+               }
+            },
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            }
+         },
+         "title":"CreatePortfolioResponse"
+      },
+      "CurrencyAllocation":{
+         "type":"object",
+         "properties":{
+            "currencyAllocation":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            }
+         },
+         "title":"CurrencyAllocation"
+      },
+      "DeletePortfolioResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            }
+         },
+         "title":"DeletePortfolioResponse"
+      },
+      "EnvironmentalFactor":{
+         "type":"object",
+         "properties":{
+            "name":{
+               "type":"string"
+            },
+            "score":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"EnvironmentalFactor"
+      },
+      "Equity":{
+         "type":"object",
+         "properties":{
+            "companies":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Company"
+               }
+            },
+            "contraversyScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsEnvScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsGovScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsSocialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Equity"
+      },
+      "FactorDto":{
+         "type":"object",
+         "properties":{
+            "name":{
+               "type":"string"
+            },
+            "score":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"FactorDto"
+      },
+      "FeatureImportanceResponse":{
+         "type":"object",
+         "properties":{
+            "e_feature_importance":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            },
+            "esg_feature_importance":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            },
+            "g_feature_importance":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            },
+            "s_feature_importance":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            }
+         },
+         "title":"FeatureImportanceResponse"
+      },
+      "File":{
+         "type":"object",
+         "properties":{
+            "absolute":{
+               "type":"boolean"
+            },
+            "absoluteFile":{
+               "$ref":"#/definitions/File"
+            },
+            "absolutePath":{
+               "type":"string"
+            },
+            "canonicalFile":{
+               "$ref":"#/definitions/File"
+            },
+            "canonicalPath":{
+               "type":"string"
+            },
+            "directory":{
+               "type":"boolean"
+            },
+            "executable":{
+               "type":"boolean"
+            },
+            "file":{
+               "type":"boolean"
+            },
+            "freeSpace":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "hidden":{
+               "type":"boolean"
+            },
+            "lastModified":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "name":{
+               "type":"string"
+            },
+            "parent":{
+               "type":"string"
+            },
+            "parentFile":{
+               "$ref":"#/definitions/File"
+            },
+            "path":{
+               "type":"string"
+            },
+            "readable":{
+               "type":"boolean"
+            },
+            "totalSpace":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "usableSpace":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "writable":{
+               "type":"boolean"
+            }
+         },
+         "title":"File"
+      },
+      "FileResponse":{
+         "type":"object",
+         "properties":{
+            "fileName":{
+               "type":"string"
+            },
+            "lastModified":{
+               "type":"string",
+               "format":"date-time"
+            },
+            "size":{
+               "type":"integer",
+               "format":"int64"
+            }
+         },
+         "title":"FileResponse"
+      },
+      "Forecast":{
+         "type":"object",
+         "properties":{
+            "date":{
+               "type":"string"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Forecast"
+      },
+      "ForecastResponse":{
+         "type":"object",
+         "properties":{
+            "actual":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Forecast"
+               }
+            },
+            "featureResponse":{
+               "$ref":"#/definitions/FeatureImportanceResponse"
+            },
+            "predictions_with_sentiment":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Forecast"
+               }
+            },
+            "predictions_without_sentiment":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Forecast"
+               }
+            }
+         },
+         "title":"ForecastResponse"
+      },
+      "Fund":{
+         "type":"object",
+         "properties":{
+            "companies":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Company"
+               }
+            },
+            "contraversyScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsEnvScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsGovScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "sustainalyticsSocialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"Fund"
+      },
+      "GetAlternativeRequest":{
+         "type":"object",
+         "properties":{
+            "esgTargetType":{
+               "type":"string"
+            },
+            "isin":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "portfolioId":{
+               "type":"string"
+            }
+         },
+         "title":"GetAlternativeRequest"
+      },
+      "GovernanceFactor":{
+         "type":"object",
+         "properties":{
+            "name":{
+               "type":"string"
+            },
+            "score":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"GovernanceFactor"
+      },
+      "HeatMapResponseDto":{
+         "type":"object",
+         "properties":{
+            "averageSentimentScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "heatMapData":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/HeatMapUIResponseDto"
+               }
+            }
+         },
+         "title":"HeatMapResponseDto"
+      },
+      "HeatMapUIResponseDto":{
+         "type":"object",
+         "properties":{
+            "id":{
+               "type":"string"
+            },
+            "name":{
+               "type":"string"
+            },
+            "parent":{
+               "type":"string"
+            },
+            "sentimentScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "value":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"HeatMapUIResponseDto"
+      },
+      "HistoricalData":{
+         "type":"object",
+         "properties":{
+            "data":{
+               "type":"string"
+            },
+            "value":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"HistoricalData"
+      },
+      "HistoricalPerformanceResponse":{
+         "type":"object",
+         "properties":{
+            "origionalPortfolio":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/HistoricalData"
+               }
+            },
+            "recommended_portfolio":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/HistoricalData"
+               }
+            }
+         },
+         "title":"HistoricalPerformanceResponse"
+      },
+      "InputStream":{
+         "type":"object",
+         "title":"InputStream"
+      },
+      "InvestibleUniverseFilterDto":{
+         "type":"object",
+         "properties":{
+            "environmental":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "esg":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "governance":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "selectedCountries":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "selectedSectors":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "social":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"InvestibleUniverseFilterDto"
+      },
+      "InvestibleUniverseResponse":{
+         "type":"object",
+         "properties":{
+            "companies":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/AlternativesCompany"
+               }
+            },
+            "investibleUniverseFilter":{
+               "$ref":"#/definitions/InvestibleUniverseFilterDto"
+            }
+         },
+         "title":"InvestibleUniverseResponse"
+      },
+      "NewFeedsResponseDto":{
+         "type":"object",
+         "properties":{
+            "isin":{
+               "type":"string"
+            },
+            "newsdata":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/NewsDataLakeResponseDto"
+               }
+            }
+         },
+         "title":"NewFeedsResponseDto"
+      },
+      "NewsDataLakeResponseDto":{
+         "type":"object",
+         "properties":{
+            "description":{
+               "type":"string"
+            },
+            "sentiment":{
+               "type":"number",
+               "format":"double"
+            },
+            "source":{
+               "type":"string"
+            },
+            "time":{
+               "$ref":"#/definitions/Timestamp"
+            },
+            "title":{
+               "type":"string"
+            },
+            "type":{
+               "type":"string"
+            },
+            "url":{
+               "type":"string"
+            }
+         },
+         "title":"NewsDataLakeResponseDto"
+      },
+      "NewsDto":{
+         "type":"object",
+         "properties":{
+            "description":{
+               "type":"string"
+            },
+            "sentiment":{
+               "type":"number",
+               "format":"double"
+            },
+            "source":{
+               "type":"string"
+            },
+            "subType":{
+               "type":"string"
+            },
+            "time":{
+               "$ref":"#/definitions/Timestamp"
+            },
+            "title":{
+               "type":"string"
+            },
+            "type":{
+               "type":"string"
+            }
+         },
+         "title":"NewsDto"
+      },
+      "PortfolioDto":{
+         "type":"object",
+         "properties":{
+            "calculationType":{
+               "type":"string"
+            },
+            "companyCount":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "environmentalFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "equity":{
+               "$ref":"#/definitions/Equity"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "fund":{
+               "$ref":"#/definitions/Fund"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "governanceFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "investableUniverseType":{
+               "type":"string"
+            },
+            "outLierCount":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioIsinsType":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            },
+            "portfolioType":{
+               "type":"string"
+            },
+            "socialFactors":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/FactorDto"
+               }
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"PortfolioDto"
+      },
+      "PortfolioListDto":{
+         "type":"object",
+         "properties":{
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            }
+         },
+         "title":"PortfolioListDto"
+      },
+      "PortfolioListResponse":{
+         "type":"object",
+         "properties":{
+            "portfolios":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/PortfolioListDto"
+               }
+            }
+         },
+         "title":"PortfolioListResponse"
+      },
+      "PortfolioSimulationResponse":{
+         "type":"object",
+         "properties":{
+            "countryAllocation":{
+               "$ref":"#/definitions/CountryAllocation"
+            },
+            "currency":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "currencyAllocation":{
+               "$ref":"#/definitions/CurrencyAllocation"
+            },
+            "envScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgCombinedScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "esgScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "govScore":{
+               "type":"number",
+               "format":"double"
+            },
+            "regions":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "sector":{
+               "$ref":"#/definitions/Sector"
+            },
+            "socialScore":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"PortfolioSimulationResponse"
+      },
+      "RenamePortfolioDto":{
+         "type":"object",
+         "properties":{
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            }
+         },
+         "title":"RenamePortfolioDto"
+      },
+      "ReplaceCompaniesRequest":{
+         "type":"object",
+         "properties":{
+            "alternative":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Alternatives"
+               }
+            },
+            "companiesToReplace":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "portfolioId":{
+               "type":"string"
+            }
+         },
+         "title":"ReplaceCompaniesRequest"
+      },
+      "ReplaceCompanyResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string"
+            },
+            "statusCode":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"ReplaceCompanyResponse"
+      },
+      "Resource":{
+         "type":"object",
+         "properties":{
+            "description":{
+               "type":"string"
+            },
+            "file":{
+               "$ref":"#/definitions/File"
+            },
+            "filename":{
+               "type":"string"
+            },
+            "inputStream":{
+               "$ref":"#/definitions/InputStream"
+            },
+            "open":{
+               "type":"boolean"
+            },
+            "readable":{
+               "type":"boolean"
+            },
+            "uri":{
+               "$ref":"#/definitions/URI"
+            },
+            "url":{
+               "$ref":"#/definitions/URL"
+            }
+         },
+         "title":"Resource"
+      },
+      "SaveForLaterRequest":{
+         "type":"object",
+         "properties":{
+            "alternative":{
+               "type":"array",
+               "items":{
+                  "$ref":"#/definitions/Alternatives"
+               }
+            },
+            "companiesToReplace":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "portfolioId":{
+               "type":"string"
+            },
+            "portfolioName":{
+               "type":"string"
+            }
+         },
+         "title":"SaveForLaterRequest"
+      },
+      "SaveForLaterResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            }
+         },
+         "title":"SaveForLaterResponse"
+      },
+      "Sector":{
+         "type":"object",
+         "properties":{
+            "sectors":{
+               "type":"object",
+               "additionalProperties":{
+                  "type":"number",
+                  "format":"double"
+               }
+            }
+         },
+         "title":"Sector"
+      },
+      "SocialFactor":{
+         "type":"object",
+         "properties":{
+            "name":{
+               "type":"string"
+            },
+            "score":{
+               "type":"number",
+               "format":"double"
+            }
+         },
+         "title":"SocialFactor"
+      },
+      "Timestamp":{
+         "type":"object",
+         "properties":{
+            "date":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "day":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "hours":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "minutes":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "month":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "nanos":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "seconds":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "time":{
+               "type":"integer",
+               "format":"int64"
+            },
+            "timezoneOffset":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "year":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"Timestamp"
+      },
+      "URI":{
+         "type":"object",
+         "properties":{
+            "absolute":{
+               "type":"boolean"
+            },
+            "authority":{
+               "type":"string"
+            },
+            "fragment":{
+               "type":"string"
+            },
+            "host":{
+               "type":"string"
+            },
+            "opaque":{
+               "type":"boolean"
+            },
+            "path":{
+               "type":"string"
+            },
+            "port":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "query":{
+               "type":"string"
+            },
+            "rawAuthority":{
+               "type":"string"
+            },
+            "rawFragment":{
+               "type":"string"
+            },
+            "rawPath":{
+               "type":"string"
+            },
+            "rawQuery":{
+               "type":"string"
+            },
+            "rawSchemeSpecificPart":{
+               "type":"string"
+            },
+            "rawUserInfo":{
+               "type":"string"
+            },
+            "scheme":{
+               "type":"string"
+            },
+            "schemeSpecificPart":{
+               "type":"string"
+            },
+            "userInfo":{
+               "type":"string"
+            }
+         },
+         "title":"URI"
+      },
+      "URL":{
+         "type":"object",
+         "properties":{
+            "authority":{
+               "type":"string"
+            },
+            "content":{
+               "type":"object"
+            },
+            "defaultPort":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "deserializedFields":{
+               "$ref":"#/definitions/URLStreamHandler"
+            },
+            "file":{
+               "type":"string"
+            },
+            "host":{
+               "type":"string"
+            },
+            "path":{
+               "type":"string"
+            },
+            "port":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "protocol":{
+               "type":"string"
+            },
+            "query":{
+               "type":"string"
+            },
+            "ref":{
+               "type":"string"
+            },
+            "serializedHashCode":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "userInfo":{
+               "type":"string"
+            }
+         },
+         "title":"URL"
+      },
+      "URLStreamHandler":{
+         "type":"object",
+         "title":"URLStreamHandler"
+      },
+      "UpdateInvestibleUniverseResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string"
+            }
+         },
+         "title":"UpdateInvestibleUniverseResponse"
+      },
+      "UpdateInvestibleUniverseTypeDTO":{
+         "type":"object",
+         "properties":{
+            "investibleUniverseType":{
+               "type":"string"
+            },
+            "portfolioId":{
+               "type":"string"
+            }
+         },
+         "title":"UpdateInvestibleUniverseTypeDTO"
+      },
+      "UpdateInvestmentUniverseFilterRequest":{
+         "type":"object",
+         "properties":{
+            "environmental":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "esg":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "governance":{
+               "type":"integer",
+               "format":"int32"
+            },
+            "selectedCountries":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "selectedSectors":{
+               "type":"array",
+               "items":{
+                  "type":"string"
+               }
+            },
+            "social":{
+               "type":"integer",
+               "format":"int32"
+            }
+         },
+         "title":"UpdateInvestmentUniverseFilterRequest"
+      },
+      "UpdatePortfolioFromMinioDto":{
+         "type":"object",
+         "properties":{
+            "fileName":{
+               "type":"string"
+            },
+            "portfolioId":{
+               "type":"string"
+            }
+         },
+         "title":"UpdatePortfolioFromMinioDto"
+      },
+      "UpdatePortfolioResponse":{
+         "type":"object",
+         "properties":{
+            "message":{
+               "type":"string"
+            },
+            "status":{
+               "type":"string",
+               "enum":[
+                  "100 CONTINUE",
+                  "101 SWITCHING_PROTOCOLS",
+                  "102 PROCESSING",
+                  "103 CHECKPOINT",
+                  "200 OK",
+                  "201 CREATED",
+                  "202 ACCEPTED",
+                  "203 NON_AUTHORITATIVE_INFORMATION",
+                  "204 NO_CONTENT",
+                  "205 RESET_CONTENT",
+                  "206 PARTIAL_CONTENT",
+                  "207 MULTI_STATUS",
+                  "208 ALREADY_REPORTED",
+                  "226 IM_USED",
+                  "300 MULTIPLE_CHOICES",
+                  "301 MOVED_PERMANENTLY",
+                  "302 FOUND",
+                  "302 MOVED_TEMPORARILY",
+                  "303 SEE_OTHER",
+                  "304 NOT_MODIFIED",
+                  "305 USE_PROXY",
+                  "307 TEMPORARY_REDIRECT",
+                  "308 PERMANENT_REDIRECT",
+                  "400 BAD_REQUEST",
+                  "401 UNAUTHORIZED",
+                  "402 PAYMENT_REQUIRED",
+                  "403 FORBIDDEN",
+                  "404 NOT_FOUND",
+                  "405 METHOD_NOT_ALLOWED",
+                  "406 NOT_ACCEPTABLE",
+                  "407 PROXY_AUTHENTICATION_REQUIRED",
+                  "408 REQUEST_TIMEOUT",
+                  "409 CONFLICT",
+                  "410 GONE",
+                  "411 LENGTH_REQUIRED",
+                  "412 PRECONDITION_FAILED",
+                  "413 PAYLOAD_TOO_LARGE",
+                  "413 REQUEST_ENTITY_TOO_LARGE",
+                  "414 URI_TOO_LONG",
+                  "414 REQUEST_URI_TOO_LONG",
+                  "415 UNSUPPORTED_MEDIA_TYPE",
+                  "416 REQUESTED_RANGE_NOT_SATISFIABLE",
+                  "417 EXPECTATION_FAILED",
+                  "418 I_AM_A_TEAPOT",
+                  "419 INSUFFICIENT_SPACE_ON_RESOURCE",
+                  "420 METHOD_FAILURE",
+                  "421 DESTINATION_LOCKED",
+                  "422 UNPROCESSABLE_ENTITY",
+                  "423 LOCKED",
+                  "424 FAILED_DEPENDENCY",
+                  "425 TOO_EARLY",
+                  "426 UPGRADE_REQUIRED",
+                  "428 PRECONDITION_REQUIRED",
+                  "429 TOO_MANY_REQUESTS",
+                  "431 REQUEST_HEADER_FIELDS_TOO_LARGE",
+                  "451 UNAVAILABLE_FOR_LEGAL_REASONS",
+                  "500 INTERNAL_SERVER_ERROR",
+                  "501 NOT_IMPLEMENTED",
+                  "502 BAD_GATEWAY",
+                  "503 SERVICE_UNAVAILABLE",
+                  "504 GATEWAY_TIMEOUT",
+                  "505 HTTP_VERSION_NOT_SUPPORTED",
+                  "506 VARIANT_ALSO_NEGOTIATES",
+                  "507 INSUFFICIENT_STORAGE",
+                  "508 LOOP_DETECTED",
+                  "509 BANDWIDTH_LIMIT_EXCEEDED",
+                  "510 NOT_EXTENDED",
+                  "511 NETWORK_AUTHENTICATION_REQUIRED"
+               ]
+            }
+         },
+         "title":"UpdatePortfolioResponse"
+      },
+      "UploadPortfolioFromMinioDto":{
+         "type":"object",
+         "properties":{
+            "fileName":{
+               "type":"string"
+            },
+            "investibleUniverseType":{
+               "type":"string"
+            }
+         },
+         "title":"UploadPortfolioFromMinioDto"
+      }
+   }
+}

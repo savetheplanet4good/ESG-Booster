@@ -1,0 +1,7 @@
+[theme]
+# Approximate Synechron brand theme; tweak as needed
+primaryColor = "#FFD100"            # Synechron yellow accent
+backgroundColor = "#0E0E0E"         # near-black background
+secondaryBackgroundColor = "#1F1F1F" # card/sidebar background
+textColor = "#FFFFFF"                # white text
+font = "sans serif"

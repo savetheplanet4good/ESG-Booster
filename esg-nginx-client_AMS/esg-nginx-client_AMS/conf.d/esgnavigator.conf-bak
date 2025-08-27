@@ -1,0 +1,55 @@
+server {
+    listen 80;
+    listen [::]:80;
+    listen 443;
+    listen [::]:443;
+    client_max_body_size 100M;
+    server_name finlabs-esg-navigator.synechron.net; 
+
+    
+
+    # UI Risk Profiler
+    location / {
+        proxy_set_header   X-Forwarded-For $remote_addr;
+        proxy_set_header   Host $host;
+        proxy_pass         http://172.17.60.119:4000;
+    }
+
+    # Risk Profile backend new
+    location /risk-profiler-service/ {
+       proxy_redirect http:// https://;
+       proxy_set_header Host $host;
+       proxy_pass http://172.17.60.119:8896/risk-profiler-service/;
+       proxy_redirect default;
+    }
+
+    # Risk Profile discovery
+    location /discovery/ {
+       proxy_redirect http:// https://;
+       proxy_set_header Host $host;
+       proxy_pass http://172.17.60.119:8895/;
+       proxy_redirect default;
+    }
+
+     # eut-alignment-service
+    location /eut-alignment-service/ {
+       proxy_redirect http:// https://;
+       proxy_set_header Host $host;
+       proxy_pass http://172.17.60.119:8898/eut-alignment-service/;
+       proxy_redirect default;
+    }
+  
+  # performance-assessment-service
+    location /performance-assessment-service/ {
+       proxy_redirect http:// https://;
+       proxy_set_header Host $host;
+       proxy_pass http://172.17.60.119:9010/performance-assessment-service/;
+       proxy_redirect default;
+    }
+
+    ssl on;
+    ssl_certificate  /etc/ssl/private/synechron-net.crt;
+    ssl_certificate_key /etc/ssl/private/synechron-net.key;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers TLS-CHACHA20-POLY1305-SHA256:TLS-AES-256-GCM-SHA384:TLS-AES-128-GCM-SHA256:HIGH:!aNUL$;
+}

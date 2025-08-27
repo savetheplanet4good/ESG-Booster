@@ -1,0 +1,75 @@
+[
+ {
+  "propertyDisplayName":"Simulation",
+  "property":"isSimulationEnabled",
+  "value":true,
+  "disabledMessage":"Simulation Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Benchmark",
+  "property":"isBenchmarkEnabled",
+  "value":true,
+  "disabledMessage":"Benchmark Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"News",
+  "property":"isNewsEnabled",
+  "value":true,
+  "disabledMessage":"News Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Outlier",
+  "property":"isOutliersEnabled",
+  "value":true,
+  "disabledMessage":"Outlier Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Forecast",
+  "property":"isForecastEnabled",
+  "value":true,
+  "disabledMessage":"Forecast Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"CO2 Emission",
+  "property":"isCO2emissionEnabled",
+  "value":true,
+  "disabledMessage":"CO2 Emission Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Network Graph",
+  "property":"isNetworkGraphEnabled",
+  "value":true,
+  "disabledMessage":"Network Graph Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Peer Comparison",
+  "property":"isPeerComparisonEnabled",
+  "value":true,
+  "disabledMessage":"Peer Comparison Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Company Historical Performance",
+  "property":"isCompanyHistPerformanceEnabled",
+  "value":true,
+  "disabledMessage":"Company Historical Performance Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Sustainability Report",
+  "property":"isSustainabiltyReportEnabled",
+  "value":true,
+  "disabledMessage":"Sustainability Report Data is Unavailable."
+ },
+ {
+  "propertyDisplayName":"Social Sentiments",
+  "property":"isSocialSentimentsEnabled",
+  "value":true,
+  "disabledMessage":"Social Sentiments Data is Unavailable."
+ },
+ {
+ "propertyDisplayName":"Investsuit",
+ "property":"isInvestsuitEnabled",
+ "value":true,
+ "disabledMessage":"Investsuit is Unavailable."
+}
+
+]
